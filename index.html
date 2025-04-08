@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vakuutusmaisteri.fi</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #F5F1EA;
+      color: #2E2E2E;
+    }
+
+    header {
+      background-color: #002A3A;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 120px;
+      margin-right: 40px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background-color: #FDC300;
+      color: #002A3A;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e0b000;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 4rem 2rem;
+      gap: 2rem;
+      background-color: #F5F1EA;
+    }
+
+    .step {
+      background-color: #F5F1EA;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      max-width: 300px;
+      flex: 1 1 250px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-5px);
+    }
+
+    .step img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
+    }
+
+    .step h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .step p {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    footer {
+      background-color: #002A3A;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo.svg.svg" alt="logo svg" />
+      <strong></strong>
+    </div>
+    <nav>
+      <a href="index.html">Etusivu</a>
+      <a href="kilpailutus.html">Kilpailutus</a>
+      <a href="yhteystiedot.html">Yhteystiedot</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="handsake.video.mp4" type="video/mp4" />
+      Selaimesi ei tue videota.
+    </video>
+    <div class="hero-content">
+      <h1>Kilpailuta vakuutuksesi – Säästä aikaa ja rahaa!</h1>
+      <p>Jätä vain yksi lomake – me hoidamme loput puolestasi.</p>
+      <a href="kilpailutus.html" class="cta-button">Aloita kilpailutus</a>
+    </div>
+  </section>
+
+  <section class="steps">
+    <div class="step">
+      <img src="icon-form.svg" alt="Lomake-kuvake" />
+      <h2>1. Täytä lomake</h2>
+      <p>Syötä perustiedot vakuutustarpeestasi helposti ja nopeasti.</p>
+    </div>
+    <div class="step">
+      <img src="icon-process.svg" alt="Kilpailutus-kuvake" />
+      <h2>2. Me kilpailutamme</h2>
+      <p>Välitämme tietosi vakuutusyhtiöille – täysin automaattisesti.</p>
+    </div>
+    <div class="step">
+      <img src="icon-check.svg" alt="Tarjous-kuvake" />
+      <h2>3. Saat tarjoukset</h2>
+      <p>Valitse paras vaihtoehto helposti ja säästä rahaa.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Vakuutusmaisteri.fi | Tietosuojaseloste | Käyttöehdot</p>
+  </footer>
+
+</body>
+</html>
